@@ -12,10 +12,11 @@ class ContractController extends Controller
             'nume' => ['required'],
             'telefon' => ['required'],
             'adresa' => ['required'],
-            'mesaj' => ['required'],
+            'mesaj'
         ]);
 
-        NewContractModel::create($form);
-        return redirect('/mail');
+        $id = '';
+        $id = NewContractModel::create($form)->id;
+        return redirect('/mail/' . $id);
     }
 }

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -18,7 +20,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/mail', [MailController::class, 'sendMail']);
+Route::get('/mail/{contract}', [MailController::class, 'sendMail']);
 Route::post('/new-contract', [ContractController::class, 'createContract']);
+Route::get('/get-images', [ImagesController::class, 'getImages']);
+Route::get('/get-comments', [CommentsController::class, 'getComments']);
+Route::post('/create-comment', [CommentsController::class, 'createComment']);
 
 Auth::routes();

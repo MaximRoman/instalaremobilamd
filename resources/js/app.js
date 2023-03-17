@@ -17,11 +17,14 @@ const app = createApp({});
 
 import ExampleComponent from './components/ExampleComponent.vue';
 import IndexComponent from './components/index-view.vue';
+import SliderComponent from './components/slider-component.vue';
+import CommentsComponent from './components/comments-component.vue';
 
 
 app.component('example-component', ExampleComponent);
 app.component('index-component', IndexComponent);
+app.component('slider-component', SliderComponent);
+app.component('comments-component', CommentsComponent);
 
 app.mount('#app');
 
-window.scrollTo(0, 'header')

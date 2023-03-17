@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('new_contract', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->string('nume', 255);
-            $table->string('telefon', 255);
-            $table->string('adresa', 255);
-            $table->text('mesaj')->default('Mesaj gol!');
+            $table->text('comentariu');
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('new_contract');
+        Schema::dropIfExists('comments');
     }
 };

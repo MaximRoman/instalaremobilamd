@@ -1,6 +1,9 @@
-Nume: Roman Maxim
-Tel: +37360216034
-Adresa: Grigore Alexandrescu 9A
-
-Mesaj:
-Bună ziua doresc să solicit o instalarea unui antreu.
+<h2>Nume</h2>
+<p>{{ $nume }}</p>
+<h2>Telefon</h2>
+<p>{{ $telefon }}</p>
+<h2>Adresa</h2>
+<p>{{ $adresa }}</p>
+<br>
+<h2>Mesaj:</h2>
+<p>{{ $mesaj }}</p>

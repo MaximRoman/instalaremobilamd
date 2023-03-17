@@ -134,6 +134,7 @@ h3 {
 }
 
 .footer-content {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #634737;
@@ -257,14 +258,31 @@ h3 {
   text-align: center;
 }
 
+.invalid {
+  border: 2px solid #DC3545;
+}
+
+.invalid::placeholder {
+  color: #DC3545;
+}
+
+.slider {
+  min-height: 50vh;
+  width: 100%;
+}
+
 @media (max-width: 786px) {
   .intro-container {
     background-image: url("https://spb.mrdivanoff.ru/image/cache/data/product/22242/22242_0-580x380.jpg");
     grid-template-columns: 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .intro-text {
-    margin: 20px;
+    margin: 0;
+    width: 100%;
   }
 
   .intro-contact {
@@ -287,7 +305,8 @@ h3 {
   }
 
   .btn {
-    font-size: 18px;
+    font-size: 16px;
+    box-sizing: border-box;
   }
   
   .main-container {
@@ -319,6 +338,7 @@ h3 {
 
   .footer-content {
     grid-template-columns: auto;
+    gap: 20px;
     padding: 0;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -327,5 +347,10 @@ h3 {
   .form-text {
     font-size: 24px;
   }
-
+  .slider-component {
+    width: 100%;
+  }
+  .slider-image-container {
+    width: 100%;
+  }
 }
